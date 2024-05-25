@@ -35,14 +35,16 @@ public class Restaurant {
 
 
     @Builder
-    public Restaurant(String rname, String pnumber, String address, String opentime, String closetime) {
+    public Restaurant(Long RID, String rname, String pnumber, String address, String opentime, String closetime) {
+        this.RID = RID;
         this.rname = rname;
         this.pnumber = pnumber;
         this.address = address;
         this.opentime = opentime;
         this.closetime = closetime;
     }
-    public void update2(String rname, String pnumber, String address, String opentime, String closetime) {
+    public void update2(Long RID, String rname, String pnumber, String address, String opentime, String closetime) {
+        this.RID = RID;
         this.rname = rname;
         this.pnumber = pnumber;
         this.address = address;
@@ -51,3 +53,4 @@ public class Restaurant {
     }
 
 }
+

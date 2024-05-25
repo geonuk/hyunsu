@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class UpdateRestaurantRequest {
+    private Long RID;
     private String rname;
     private String address;
     private String pnumber;

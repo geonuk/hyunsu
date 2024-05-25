@@ -8,6 +8,7 @@ import org.example.springbootdeveloper.domain.Restaurant;
 @AllArgsConstructor
 @Getter
 public class AddrestaurantRequest {
+    private Long RID;
     private String rname;
     private String address;
     private String pnumber;
@@ -16,6 +17,7 @@ public class AddrestaurantRequest {
 
     public Restaurant toEntity(){
         return Restaurant.builder()
+                .RID(RID)
                 .rname(rname)
                 .address(address)
                 .pnumber(pnumber)

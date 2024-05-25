@@ -4,6 +4,7 @@ import org.example.springbootdeveloper.domain.Restaurant;
 
 @Getter
 public class RestaurantResponse {
+    private final Long RID;
     private final String rname;
     private final String pnumber;
     private final String address;
@@ -11,6 +12,7 @@ public class RestaurantResponse {
     private final String closetime;
 
     public RestaurantResponse(Restaurant restaurant){
+        this.RID = restaurant.getRID();
         this.rname = restaurant.getRname();
         this.pnumber = restaurant.getPnumber();
         this.address = restaurant.getAddress();
