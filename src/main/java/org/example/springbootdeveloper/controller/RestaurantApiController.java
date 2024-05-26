@@ -41,7 +41,7 @@ public class RestaurantApiController {
     }
 
     @GetMapping("/api/restaurant/{RID}")
-    public ResponseEntity<RestaurantResponse> findArticle(@PathVariable long RID) {
+    public ResponseEntity<RestaurantResponse> findArticle(@PathVariable int RID) {
         Restaurant restaurant = restaurantService.findById(RID);
 
         return ResponseEntity.ok()
@@ -49,7 +49,7 @@ public class RestaurantApiController {
     }
 
     @DeleteMapping("/api/restaurant/{RID}")
-    public ResponseEntity<Void> deleteArticle(@PathVariable long RID) {
+    public ResponseEntity<Void> deleteArticle(@PathVariable int RID) {
         restaurantService.delete(RID);
 
         return ResponseEntity.ok()
@@ -57,7 +57,7 @@ public class RestaurantApiController {
     }
 
     @PutMapping("/api/restaurant/{RID}")
-    public ResponseEntity<Restaurant> updateArticle(@PathVariable long RID,
+    public ResponseEntity<Restaurant> updateArticle(@PathVariable int RID,
                                                  @RequestBody UpdateRestaurantRequest request) {
         Restaurant updatedRestaurant = restaurantService.update2(RID, request);
 
